@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update
 RUN apt-get install make git zlib1g-dev libssl-dev gperf php cmake clang-6.0 libc++-dev libc++abi-dev -y
 RUN git clone https://github.com/tdlib/td.git
 RUN cd td && git checkout v1.6.0 && rm -rf build && mkdir build && cd build
