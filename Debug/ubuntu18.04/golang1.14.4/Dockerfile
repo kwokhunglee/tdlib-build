@@ -11,5 +11,6 @@ RUN cd /td/build && cmake --build . --target prepare_cross_compiling
 RUN cd /td && php SplitSource.php
 RUN cd /td/build  && cmake --build . --target install
 RUN cd /td && php SplitSource.php --undo
+RUN apt-get install wget
 RUN wget -O go.tgz https://studygolang.com/dl/golang/go1.14.4.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf go.tgz && rm go.tgz
